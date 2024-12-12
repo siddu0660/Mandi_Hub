@@ -1,0 +1,203 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+    .container {
+        max-width: 1200px;
+        margin: -15px auto;
+        padding: 20px;
+        overflow: hidden;
+    }
+    
+    header {
+        background: #2C3E50;
+        color: #fff;
+        padding: 10px 20px;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    header h1 {
+        margin: 0;
+        font-size: 1.1em;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+    }
+    
+    header h1 .fas {
+        margin-right: 10px;
+        color: #FFFFFF;
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+    }
+    
+    nav ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    nav ul li {
+        margin-left: 20px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #FFFFFF;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+        color: #BDC3C7;
+    }
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: #FFFFFF; /* White */
+    margin: 4px 0;
+    transition: 0.4s;
+}
+.about-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: #fff;
+}
+.about-section h2 {
+    font-size: 2.5em;
+    margin-top: -18px;
+    margin-bottom: 25px;
+    /* color: #228B22; */
+    color:#22438b;
+}
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.about-content img {
+    flex: 1;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInLeft 1s;
+}
+.about-text {
+    flex: 2;
+    text-align: left;
+    padding: 20px;
+    background:#d4fbfd;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInRight 1s;
+}
+.about-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.message-section {
+    margin-top: -39px;
+    background: #f0f0f0;
+    padding: 80px 20px;
+    text-align: center;
+}
+.message-section h2 {
+    margin-top: -25px;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #22438b;
+}
+.message {
+    display: inline-block;
+    max-width: 800px;
+    padding: 40px;
+    background: #f4fdd0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+.message p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+.message:before, .message:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #0200ff;
+    border-radius: 50%;
+    opacity: 0.2;
+}
+.message:before {
+    top: -20px;
+    left: -20px;
+}
+.message:after {
+    bottom: -20px;
+    right: -20px;
+}
+footer {
+    background: #228B22;
+    background-color: #2C3E50; /* Dark Slate */
+    color: #fff;
+    text-align: center;
+    padding: 0px 0;
+}
+footer p {
+    margin: -12px;
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text {
+        text-align: center;
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandi Hub.in - List Your Products</title>
+    <link rel="stylesheet" href="farmer_listing.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-tractor"></i> Mandi Hub.com</h1>
+
+    </header>
+    <div class="centered-section">
+        <a href="/website code/folder1/Login_sign.html"><i class="fas fa-sign-in-alt"></i> Login</a> 
+        <a href="#"><i class="fas fa-business-time"></i> Business Request</a> 
+        <a href="#"><i class="fas fa-user"></i> Profile</a>
+    </div>
+    <div class="container">
+        <div class="section" id="listProduct">
+            <h2><i class="fas fa-seedling"></i> List Your Product</h2>
+            <form id="productForm">
+                <div>
+                    <label for="productName">Product Name:</label>
+                    <input type="text" id="productName" placeholder="e.g., Apples" required>
+                </div>
+                <div>
+                    <label for="productType">Product Type:</label>
+                    <input type="text" id="productType" placeholder="e.g., Fruit" required>
+                </div>
+                <div>
+                    <label for="Quality">Quality of Product:</label>
+                    <select id="Quality" required>
+                        <option value="">Select Quality</option>
+                        <option value="Quality 1">Quality 1</option>
+                        <option value="Quality 2">Quality 2</option>
+                        <option value="Quality 3">Quality 3</option>
+                        <option value="Quality 4">Quality 4</option>
+                    </select>
+                </div>                
+                <div>
+                    <label for="productDuration">Time Duration (days):</label>
+                    <input type="number" id="productDuration" placeholder="e.g., 10" required>
+                </div>
+                <div>
+                    <label for="productPrice">Price(₹):</label>
+                    <input type="number" id="productPrice" placeholder="e.g., 15" required>
+                </div>
+                <div>
+                    <label for="productImage">Upload Product Image:</label>
+                    <input type="file" id="productImage" accept="image/*" capture="environment" required>
+                </div>
+                <div>
+                    <button type="submit"><i class="fas fa-plus-circle"></i> List Product</button>
+                </div>
+            </form>
+            <div class="product-display" id="productData">
+                <h3><i class="fas fa-box-open"></i> Listed Products</h3>
+                <!-- Product data will be displayed here -->
+            </div>
+        </div>
+    </div>
+    <script src="farmer_listing.js"> </script>
+</body>
+</html>

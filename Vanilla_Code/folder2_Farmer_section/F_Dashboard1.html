@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Updated1_website_code/folder2_Farmer_section/F_Dashboard1.css">
+    <title>Mandi Hub.in Home</title>
+    <style>
+    </style>
+</head>
+<body>
+    <header>
+        Mandi Hub
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    <nav id="mobile-nav">
+        <a href="profile_management.html">Profile Management</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="help_support.html">Help and Support</a>
+        <a href="settings.html">Settings</a>
+        <a href="dashboard.html">Dashboard</a>
+    </nav>
+    <div class="container">
+        <h2>Welcome to The Mandi Hub</h2>
+        <p>Your one-stop solution for all your agricultural needs.</p>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">👤</div>
+                <div class="feature-title">Profile Management</div>
+                <div class="feature-description">
+                    Manage personal and business profiles, including contact information, business details, and preferences.
+                </div>
+                <a href="profile_management.html" class="link">Manage Profile</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔔</div>
+                <div class="feature-title">Notifications</div>
+                <div class="feature-description">
+                    Real-time notifications for order updates, messages, payment confirmations, and alerts.
+                </div>
+                <a href="notifications.html" class="link">View Notifications</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🆘</div>
+                <div class="feature-title">Help and Support</div>
+                <div class="feature-description">
+                    Access to customer support, FAQs, and troubleshooting guides.
+                </div>
+                <a href="help_support.html" class="link">Get Support</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚙️</div>
+                <div class="feature-title">Settings</div>
+                <div class="feature-description">
+                    Customise app settings, notifications, language preferences, and more.
+                </div>
+                <a href="settings.html" class="link">Open Settings</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <div class="feature-title">Dashboard</div>
+                <div class="feature-description">
+                    Overview and manage your activity on the platform.
+                </div>
+                <a href="dashboard.html" class="link">Go to Dashboard</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 The Live Mandi.com. All rights reserved.</p>
+        </div>
+    </footer>    
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('mobile-nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

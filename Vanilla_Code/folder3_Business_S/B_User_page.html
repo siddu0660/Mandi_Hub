@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Live Mandi Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .menu-icon {
+            cursor: pointer;
+            display: none;
+        }
+        .menu-icon div {
+            width: 30px;
+            height: 4px;
+            background-color: red;
+            margin: 5px 0;
+        }
+        .home-link {
+            margin-right: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            padding: 5px;
+            font-weight: bold;
+            border: 2px solid black;
+            border-radius: 30px;
+        }
+        .home-link:hover {
+            text-decoration: underline;
+        }
+        .navbar {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            visibility: hidden;
+            height: 0;
+            overflow: hidden;
+        }
+        .navbar li {
+            padding: 10px 20px;
+            cursor: pointer;
+            color: white;
+        }
+        .navbar li:hover {
+            background-color: #388E3C;
+        }
+        .container {
+            padding: 20px;
+        }
+        .dashboard {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: #4CAF50;
+        }
+        .card-title {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .card-description {
+            font-size: 16px;
+            color: #555;
+        }
+        .link {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+                margin-right: 20px;
+            }
+            .navbar {
+                flex-direction: column;
+                background-color: #4CAF50;
+                position: absolute;
+                top: 50px;
+                left: -100%;
+                width: 100%;
+                transition: left 0.3s;
+                visibility: visible;
+                height: auto;
+            }
+            .navbar li {
+                text-align: center;
+                padding: 15px;
+                border-bottom: 1px solid white;
+            }
+            .navbar li:last-child {
+                border-bottom: none;
+            }
+            .navbar.active {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="menu-icon" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </span>
+        </div>
+        Mandi Hub Dashboard
+        <a href="/website code/folder1/homepage2.html" class="home-link">Home</a>
+    </header>
+    <ul class="navbar">
+        <li onclick="location.href='search_produce.html'">Search Produce</li>
+        <li onclick="location.href='order_tracking.html'">Order Tracking</li>
+        <li onclick="location.href='payment_gateway.html'">Payment Gateway</li>
+        <li onclick="location.href='feedback_reviews.html'">Feedback</li>
+    </ul>
+    <div class="container">
+        <h2>welcome to your dashboard </h2>
+        <!-- <div>welcome to your Dashboard</div> -->
+        <div class="dashboard">
+            
+            <div class="card">
+                <div class="card-icon">🔍</div>
+                <div class="card-title">Search and Browse Produce</div>
+                <div class="card-description">
+                    Search for specific produce or combination, view listings by farmers, and filter by criteria like price, quality, and location.
+                </div>
+                <a href="/website code/folder3Busines/Business1Product.html" class="link">Explore Produce</a>
+            </div>
+            <div class="card">
+                <div class="card-icon">📦</div>
+                <div class="card-title">Order Tracking</div>
+                <div class="card-description">
+                    Track the status of orders from placement to delivery.
+                </div>
+                <a href="order_tracking.html" class="link">Track Orders</a>
+            </div>
+            <div class="card">
+                <div class="card-icon">💳</div>
+                <div class="card-title">Payment Gateway</div>
+                <div class="card-description">
+                    Secure payment options including credit cards, bank transfers, and digital wallets.
+                </div>
+                <a href="payment_gateway.html" class="link">Make a Payment</a>
+            </div>
+            <div class="card">
+                <div class="card-icon">⭐</div>
+                <div class="card-title">Feedback and Reviews</div>
+                <div class="card-description">
+                    Rate and review farmers and transporters.
+                </div>
+                <a href="feedback_reviews.html" class="link">Give Feedback</a>
+            </div>
+            <div class="card">
+                <div class="card-icon">⭐</div>
+                <div class="card-title">community</div>
+                <div class="card-description">
+                    get connect to the community.
+                </div>
+                <a href="feedback_reviews.html" class="link">let connects</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.navbar').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

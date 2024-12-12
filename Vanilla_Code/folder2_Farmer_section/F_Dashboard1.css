@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #2C3E50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    position: relative;
+}
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+.hamburger-menu div {
+    width: 30px;
+    height: 4px;
+    background-color: white;;
+    margin: 5px 0;
+}
+nav {
+    display: none;
+    flex-direction: column;
+    background-color: #5a7bce;
+    border-radius: 12px;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+nav a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+nav a:hover {
+    background-color: #388E3C;
+}
+.container {
+    margin-top: 15px;
+    padding: 1px;
+    text-align: center;
+}
+.feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.feature-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.feature-card:hover {
+    transform: scale(1.05);
+}
+.feature-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #4CAF50;
+}
+.feature-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+.feature-description {
+    font-size: 16px;
+    color: #555;
+}
+.link {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+.link:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #34495E; /* Blue Gray */
+    color: #FFFFFF; /* White */
+    text-align: center;
+    padding: 0px 0;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+        margin-top: -6px;
+    }
+    nav {
+        display: none;
+    }
+    nav.active {
+        display: flex;
+    }
+    .feature-card {
+        width: 80%;
+    }
+}
