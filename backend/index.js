@@ -379,6 +379,42 @@ app.post("/api/handleServiceRequest", async (req, res) => {
   }
 });
 
+app.post("/api/query", async (req, res) => {
+  const { userCode, formData } = req.body;
+
+  console.log(`Received form submission from userCode: ${userCode}`);
+  console.log("Form data:", formData);
+
+  try {
+    const queryId = uuidv4();
+
+    const queryRef = db.ref(`queries/${queryId}`);
+
+    const newQueryData = {
+      userCode,
+      formData,
+      submittedAt: new Date().toISOString(), 
+    };
+
+    await queryRef.set(newQueryData);
+
+    console.log("Form submitted successfully.");
+
+    res.status(201).json({
+      success: true,
+      message: "Form submitted successfully",
+      queryId,
+    });
+  } catch (error) {
+    console.error("Error submitting form:", error);
+
+    res.status(500).json({
+      success: false,
+      message: "Failed to submit form",
+    });
+  }
+});
+
 const port = 8000;
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
