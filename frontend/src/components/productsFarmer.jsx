@@ -16,7 +16,6 @@ function ProductsF() {
   const userCode = useSelector((state) => state.auth.uid);
 
   const fetchProducts = async () => {
-    console.log(BACKEND_URL);
     try {
       const response = await axios.get(`${BACKEND_URL}/api/fetchProducts`, {
         params: { userCode },
@@ -31,7 +30,6 @@ function ProductsF() {
   };
 
   useEffect(() => {
-    console.log(products);
     fetchProducts();
   }, []);
 
@@ -75,7 +73,6 @@ function ProductsF() {
   };
 
   const handleEditProduct = (index) => {
-    console.log(products[index].addedBy);
     if (products[index].addedBy === userCode) {
       setEditIndex(index);
       setIsModalOpen(true);

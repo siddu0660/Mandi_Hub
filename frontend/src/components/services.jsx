@@ -46,7 +46,6 @@ function Services() {
         };
 
         fetchProducts();
-        console.log(userCode);
     }, []);
 
     const handleRequestService = async (productId) => {

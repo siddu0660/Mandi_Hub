@@ -27,7 +27,6 @@ const SignIn = ({ setShowSignIn }) =>
         formData.email,
         formData.password
       );
-      console.log(userCredential.user.uid);
       dispatch(setStatus(true))
       dispatch(fetchUserProfile(userCredential.user.uid));
       navigate("/")
@@ -44,7 +43,6 @@ const SignIn = ({ setShowSignIn }) =>
       const userRef = ref(database, "users/" + user.uid);
       const snapshot = await get(userRef);
 
-      console.log(user.uid);
       if (!snapshot.exists()) {
         const newUser = {
           name: user.displayName || "",
