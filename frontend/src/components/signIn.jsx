@@ -65,8 +65,11 @@ const SignIn = ({ setShowSignIn }) =>
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-gray-100">
       <h1 className="bg-gray-100 text-3xl mb-4">Mandi-Hub</h1>
-      <form className="bg-white p-8 rounded-2xl w-96" onSubmit={handleSignIn}>
-        <div className="text-3xl text-black mb-2">Sign In</div>
+
+      <form className="bg-white p-8 rounded-2xl w-96 shadow-lg" onSubmit={handleSignIn}>
+        <div className="flex justify-center">
+          <div className="text-2xl text-black mb-3">Sign In</div>
+        </div>
         <div className="flex flex-col mb-4">
           <label className="font-semibold text-gray-700">Email</label>
           <div className="flex items-center border text-black border-gray-300 rounded-lg mt-2">
@@ -83,7 +86,7 @@ const SignIn = ({ setShowSignIn }) =>
             </svg>
             <input
               placeholder="Enter your Email"
-              className="w-full h-full px-3 py-2 border-none focus:outline-none rounded-lg"
+              className="w-full h-full pl-8 px-3 py-3 border-none focus:outline-none rounded-lg shadow-lg text-xl"
               type="text"
               value={formData.email}
               onChange={(e) =>
@@ -94,8 +97,8 @@ const SignIn = ({ setShowSignIn }) =>
         </div>
 
         <div className="flex flex-col mb-4">
-          <label className="font-semibold text-gray-700">Password</label>
-          <div className="flex items-center border text-black border-gray-300 rounded-lg mt-2">
+          <label className="font-semibold text-gray-700 ">Password</label>
+          <div className="flex items-center border text-black border-gray-300 rounded-lg mt-2 shadow-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={20}
@@ -108,7 +111,7 @@ const SignIn = ({ setShowSignIn }) =>
             </svg>
             <input
               placeholder="Enter your Password"
-              className="w-full h-full px-3 py-2 border-none focus:outline-none rounded-lg"
+              className="w-full h-full pl-8 px-3 py-3 border-none focus:outline-none rounded-lg text-xl"
               type="password"
               value={formData.password}
               onChange={(e) =>
@@ -124,11 +127,11 @@ const SignIn = ({ setShowSignIn }) =>
           </span> */}
         </div>
 
-        <button className="w-full bg-gray-800 text-white font-medium py-2 rounded-lg mb-4">
+        <button className="w-full bg-gray-800 text-white font-medium py-3 rounded-lg mb-4 text-lg">
           Sign In
         </button>
 
-        <p className="text-center text-sm text-gray-700 mb-4">
+        <p className="text-center text-lg text-gray-700 mb-4">
           Don't have an account?{" "}
           <button
             className="text-blue-600 cursor-pointer"
@@ -138,11 +141,12 @@ const SignIn = ({ setShowSignIn }) =>
           </button>
         </p>
 
-        <p className="text-center text-sm text-gray-700 mb-4">Or With</p>
+        <p className="text-center text-md text-gray-700 mb-4">Or With</p>
 
         <div className="flex flex-col gap-4">
           <button
-            className="w-full flex items-center text-black justify-center gap-3 bg-white border border-gray-300 py-2 px-4 rounded-lg hover:border-blue-600 transition duration-200"
+
+            className="w-full flex items-center text-black justify-center gap-3 bg-white border border-gray-300 py-2 px-3 rounded-lg hover:border-blue-600 transition duration-200"
             onClick={handleGoogleSignIn}
           >
             <svg
